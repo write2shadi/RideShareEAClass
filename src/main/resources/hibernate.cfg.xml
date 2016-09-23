@@ -29,6 +29,8 @@
 		<mapping class="mum.ea.model.RideInfo" />
 		<mapping class="mum.ea.model.CarInfo" />
 		<mapping class="mum.ea.model.Address" />
+		<mapping class="mum.ea.model.Booking" />
+		
 
 	</session-factory>
 </hibernate-configuration>
