@@ -1,6 +1,5 @@
 package mum.ea;
 
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.hibernate.HibernateException;
@@ -11,11 +10,7 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.Person;
-
-import edu.mum.hw2.control.EntityManager;
-import edu.mum.hw2.control.EntityTransaction;
-import edu.mum.hw2.control.Movie;
+import mum.ea.model.User;
 
 
 
@@ -40,12 +35,15 @@ public class RideshareApplication {
 		try {
 			tx = session.beginTransaction();
 		
-			/*p.setFirstname("stella");
-			p.setLastname("Nshuti");
-			p.setId((Integer) session.save(p));
-			tx.commit();*/
+			User u = new User();
+			u.setUsername("Stella");
+			u.setPassword("123456");
 			
-			System.out.println("ID is:"+p.getId());
+			session.persist(u);
+
+			tx.commit();
+			
+			System.out.println("ID is:"+u.getId());
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
