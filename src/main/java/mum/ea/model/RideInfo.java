@@ -17,8 +17,8 @@ public class RideInfo {
 	@GeneratedValue
 	private int rideId;
 	
-//	@ManyToOne
-//	private User user;
+	@ManyToOne
+	private User user;
 	
 	@Embedded
 	private Address pickUpAddress;
@@ -43,13 +43,13 @@ public class RideInfo {
 		this.rideId = rideId;
 	}
 
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public Address getPickUpAddress() {
 		return pickUpAddress;
