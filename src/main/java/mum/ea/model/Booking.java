@@ -15,7 +15,7 @@ public class Booking {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	@ManyToMany
+	@ManyToOne
 	private User user;
 	
 
@@ -23,6 +23,38 @@ public class Booking {
 	private RideInfo ride;
 	
 	private Date timeOfBooking;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public RideInfo getRide() {
+		return ride;
+	}
+
+	public void setRide(RideInfo ride) {
+		this.ride = ride;
+	}
+
+	public Date getTimeOfBooking() {
+		return timeOfBooking;
+	}
+
+	public void setTimeOfBooking(Date timeOfBooking) {
+		this.timeOfBooking = timeOfBooking;
+	}
 	
 	
 
