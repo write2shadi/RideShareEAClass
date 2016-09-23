@@ -33,7 +33,7 @@ public class RideshareApplication {
 			tx = session.beginTransaction();
 		
 			User u = new User();
-			u.setUsername("Stella");
+			u.setUsername("mizan");
 			u.setPassword("123456");
 			
 			session.persist(u);

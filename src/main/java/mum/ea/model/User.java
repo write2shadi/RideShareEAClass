@@ -25,6 +25,10 @@ public class User {
 	private String username;
 	private String password;
 	
+	
+	@OneToMany(mappedBy="user")
+	private List<CarInfo> caInfos = new ArrayList<>();
+	
 	@OneToMany(mappedBy="user")
 	private List<RideInfo> rideinfos = new ArrayList<>();
 	

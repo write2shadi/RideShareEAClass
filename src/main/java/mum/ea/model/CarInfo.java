@@ -9,6 +9,9 @@ public class CarInfo {
 	@GeneratedValue
 	private int id;
 	
+	@ManyToOne
+	private User user;
+	
 	private String carMake;
 	private String carModel;
 	private int carYear;
