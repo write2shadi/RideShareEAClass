@@ -1,7 +1,9 @@
 package mum.ea.model;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -36,6 +38,9 @@ public class RideInfo {
 	private Date pickUpDateAndTime;
 	
 	private String description;
+	
+	@OneToMany(mappedBy="user")
+	private List<Booking> bookings = new ArrayList<>();
 	
 	public RideInfo(){
 		
@@ -87,6 +92,14 @@ public class RideInfo {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Booking> getBookings() {
+		return bookings;
+	}
+
+	public void setBookings(List<Booking> bookings) {
+		this.bookings = bookings;
 	}
 	
 	
