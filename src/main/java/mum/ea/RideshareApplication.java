@@ -36,6 +36,7 @@ public class RideshareApplication {
 			u.setUsername("mizan");
 			u.setPassword("123456");
 			
+			
 			session.persist(u);
 
 			tx.commit();

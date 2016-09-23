@@ -32,6 +32,9 @@ public class User {
 	@OneToMany(mappedBy="user")
 	private List<RideInfo> rideinfos = new ArrayList<>();
 	
+	@OneToMany(mappedBy="user")
+	private List<Booking> bookings = new ArrayList<>();
+	
 	public int getId() {
 		return id;
 	}
