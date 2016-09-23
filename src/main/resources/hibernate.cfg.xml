@@ -26,6 +26,9 @@
 
 		<!-- List of XML mapping files -->
 		<mapping class="mum.ea.model.User" />
+		<mapping class="mum.ea.model.RideInfo" />
+		<mapping class="mum.ea.model.CarInfo" />
+		<mapping class="mum.ea.model.Address" />
 
 	</session-factory>
 </hibernate-configuration>
