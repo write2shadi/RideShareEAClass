@@ -1,5 +1,8 @@
 package mum.ea.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -21,6 +24,9 @@ public class User {
 	private String role;
 	private String username;
 	private String password;
+	
+	@OneToMany(mappedBy="user")
+	private List<RideInfo> rideinfos = new ArrayList<>();
 	
 	public int getId() {
 		return id;
@@ -100,5 +106,12 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public List<RideInfo> getRideinfos() {
+		return rideinfos;
+	}
+	public void setRideinfos(List<RideInfo> rideinfos) {
+		this.rideinfos = rideinfos;
+	}
+	
 	
 }
