@@ -3,13 +3,7 @@ package mum.ea.model;
 
 import java.util.Date;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 @Entity
 public class RideInfo {
@@ -17,13 +11,25 @@ public class RideInfo {
 	@GeneratedValue
 	private int rideId;
 	
-//	@ManyToOne
-//	private User user;
+	@ManyToOne
+	private User user;
 	
 	@Embedded
+	@AttributeOverrides({
+		@AttributeOverride(name="street", column=@Column(name="PICKUP_STREET")),
+		@AttributeOverride(name="city", column=@Column(name="PICKUP_CITY")),
+		@AttributeOverride(name="state", column=@Column(name="PICKUP_STATE")),
+		@AttributeOverride(name="zipCode", column=@Column(name="PICKUP_ZIP"))
+	})
 	private Address pickUpAddress;
 	
 	@Embedded
+	@AttributeOverrides({
+		@AttributeOverride(name="street", column=@Column(name="DROPOFF_STREET")),
+		@AttributeOverride(name="city", column=@Column(name="DROPOFF_CITY")),
+		@AttributeOverride(name="state", column=@Column(name="DROPOFF_STATE")),
+		@AttributeOverride(name="zipCode", column=@Column(name="DROPOFF_ZIP"))
+	})
 	private Address dropOffAddress;
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -43,13 +49,13 @@ public class RideInfo {
 		this.rideId = rideId;
 	}
 
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public Address getPickUpAddress() {
 		return pickUpAddress;
