@@ -52,6 +52,15 @@ public class CarInfo {
 	public void setCarType(String carType) {
 		this.carType = carType;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
 	
 	
 	
