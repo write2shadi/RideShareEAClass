@@ -27,13 +27,13 @@ public class User {
 	
 	
 	@OneToMany(mappedBy="user")
-	private List<CarInfo> caInfos = new ArrayList<>();
+	private List<CarInfo> caInfos = new ArrayList<CarInfo>();
 	
 	@OneToMany(mappedBy="user")
-	private List<RideInfo> rideinfos = new ArrayList<>();
+	private List<RideInfo> rideinfos = new ArrayList<RideInfo>();
 	
 	@OneToMany(mappedBy="user")
-	private List<Booking> bookings = new ArrayList<>();
+	private List<Booking> bookings = new ArrayList<Booking>();
 	
 	public int getId() {
 		return id;
