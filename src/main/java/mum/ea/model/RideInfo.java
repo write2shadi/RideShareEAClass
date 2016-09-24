@@ -40,7 +40,7 @@ public class RideInfo {
 	private String description;
 	
 	@OneToMany(mappedBy="ride")
-	private List<Booking> bookings = new ArrayList<>();
+	private List<Booking> bookings = new ArrayList<Booking>();
 	
 	public RideInfo(){
 		
