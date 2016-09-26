@@ -13,13 +13,13 @@ public class CarInfoServiceImpl implements CarInfoService{
 	public void setPersonDAO(CarInfoDao carInfoDao) {
 		this.carInfoDao = carInfoDao;
 	}
-
+	
 	@Override
 	@Transactional
 	public void addCarInfo(CarInfo carInfo) {
 		// TODO Auto-generated method stub
 		this.carInfoDao.addCarInfo(carInfo);
-		
 	}
+
 
 }
