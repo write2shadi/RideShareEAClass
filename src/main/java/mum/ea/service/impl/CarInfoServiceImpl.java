@@ -10,9 +10,9 @@ public class CarInfoServiceImpl implements CarInfoService{
 	
 	private CarInfoDao carInfoDao;
 
-	public void setPersonDAO(CarInfoDao carInfoDao) {
-		this.carInfoDao = carInfoDao;
-	}
+    public CarInfoServiceImpl(CarInfoDao carInfoDao) {
+        this.carInfoDao=carInfoDao;
+    }
 
 	@Override
 	@Transactional

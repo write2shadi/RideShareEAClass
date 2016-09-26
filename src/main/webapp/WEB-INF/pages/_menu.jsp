@@ -12,6 +12,10 @@
   
   <a href="${pageContext.request.contextPath}/admin">Admin</a>
   
+  | &nbsp;
+  
+  <a href="${pageContext.request.contextPath}/carInfo">CarInfo</a>
+  
   <c:if test="${pageContext.request.userPrincipal.name != null}">
   
      | &nbsp;
