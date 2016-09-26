@@ -18,7 +18,7 @@ public class RideshareApplication {
 
 	
 		
-   public static ClassPathXmlApplicationContext xmlContext = new ClassPathXmlApplicationContext("Beans.xml");
+  
 	
     private static SessionFactory sf;
 	public static SessionFactory getSession(){		
