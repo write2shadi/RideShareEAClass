@@ -1,5 +1,6 @@
 package mum.ea.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.*;
@@ -16,13 +17,9 @@ import mum.ea.service.impl.UserServiceImpl;
 @Controller
 public class UserController {
 
-	
+	@Autowired
 	private UserService userService;
-	
-	public UserController(){
-	   userService = 
-			   (UserService) RideshareApplication.xmlContext.getBean("userService");
-	}
+
 	
 	 @RequestMapping(value = { "/register" }, method = RequestMethod.GET)
 	    public String registerNewUser(Model model) {
