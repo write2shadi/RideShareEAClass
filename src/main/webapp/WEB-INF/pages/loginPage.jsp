@@ -1,11 +1,5 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
- 
-<html>
-<head><title>Login</title></head>
-<body>
-   <jsp:include page="_menu.jsp" />
-    
-    
+<jsp:include page="_header.jsp" />
+
    <h1>Login</h1>
      
      <!-- /login?error=true -->
@@ -35,5 +29,4 @@
          </tr>
       </table>
   </form>
-</body>
-</html>
+<jsp:include page="_footer.jsp" />

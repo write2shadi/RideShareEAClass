@@ -20,5 +20,12 @@
       <value>.jsp</value>
     </property>
   </bean>
+  
+     <!-- Definition for userService bean without constructor-arg  -->
+   <bean id="userService" class="mum.ea.service.impl.UserServiceImpl">
+   </bean>
+
+	<bean id="userDao" class="mum.ea.dao.impl.UserDaoImpl">
+   </bean>
  
 </beans>
