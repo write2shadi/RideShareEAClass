@@ -6,7 +6,8 @@ import javax.persistence.*;
 public class CarInfo {
 	
 	@Id
-	@GeneratedValue
+	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@ManyToOne
