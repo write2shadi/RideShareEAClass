@@ -16,9 +16,7 @@ import mum.ea.model.User;
 
 public class RideshareApplication {
 
-	
-		
-   public static ClassPathXmlApplicationContext xmlContext = new ClassPathXmlApplicationContext("Beans.xml");
+
 	
     private static SessionFactory sf;
 	public static SessionFactory getSession(){		
@@ -30,13 +28,9 @@ public class RideshareApplication {
 				System.out.println(ex);
 			}
 		}
-		return sf;		
+		return sf;
 	}
 	
-
-	public  RideshareApplication(){
-		
-	}
 	 
 }
 
