@@ -17,9 +17,6 @@ import mum.ea.model.User;
 public class RideshareApplication {
 
 	
-		
-  
-	
     private static SessionFactory sf;
 	public static SessionFactory getSession(){		
 		if(sf == null){
@@ -30,13 +27,9 @@ public class RideshareApplication {
 				System.out.println(ex);
 			}
 		}
-		return sf;		
+		return sf;
 	}
 	
-
-	public  RideshareApplication(){
-		
-	}
 	 
 }
 

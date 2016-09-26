@@ -16,8 +16,7 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 	
 	public void registerUser(User u) {
-		
-		// userDao = new UserDaoImpl();
+				
 		// TODO Auto-generated method stub
 		userDao.addUser(u);		
 	}
